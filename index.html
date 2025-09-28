@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rialo Space Shooter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ui-top">
+    <img id="logo" src="https://i.postimg.cc/218BFCkZ/rialo-logo.png" alt="Rialo Logo">
+    <div class="hud">
+      <div>Score: <span id="score">0</span></div>
+      <div>Lives: <span id="lives">3</span></div>
+    </div>
+  </div>
+
+  <div id="game-wrap">
+    <canvas id="game"></canvas>
+    <div id="touch-controls">
+      <button id="leftBtn" class="touch-btn">◀</button>
+      <button id="shootBtn" class="touch-btn">●</button>
+      <button id="rightBtn" class="touch-btn">▶</button>
+    </div>
+  </div>
+
+  <div id="overlay">
+    <h1 id="statusTitle">Rialo Space Shooter</h1>
+    <p id="statusText">Click / Tap to start. Move with arrows or touch buttons.</p>
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

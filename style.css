@@ -1,0 +1,27 @@
+:root{
+  --bg1:#020324;
+  --bg2:#08104a;
+  --accent:#ff5c9e;
+  --muted:#cdd7ff;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background: radial-gradient(1200px 600px at 10% 10%, rgba(2,3,36,0.9) 0%, rgba(8,16,74,1) 40%, #001133 100%), linear-gradient(180deg,#021034 0%, #00102a 100%);color:var(--muted);-webkit-tap-highlight-color:transparent;}
+
+.ui-top{position:fixed;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;z-index:40;pointer-events:none;}
+#logo{width:130px; height:auto; pointer-events:auto; filter:drop-shadow(0 6px 12px rgba(0,0,0,0.5));}
+.hud{display:flex;gap:16px;font-weight:600;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:8px 12px;border-radius:10px;box-shadow: 0 6px 18px rgba(0,0,0,0.5);pointer-events:none;}
+
+#game-wrap{width:100%;max-width:920px;aspect-ratio:16/9;position:relative;border-radius:14px;overflow:hidden;box-shadow: 0 20px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);}
+canvas#game{display:block;width:100%;height:100%;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.2));}
+
+/* overlay */
+#overlay{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2));z-index:60;color:white;text-align:center;}
+#statusTitle{font-size:28px;margin-bottom:4px;}
+#statusText{opacity:0.9;margin-bottom:6px;}
+#startBtn{padding:12px 22px;font-size:18px;background:linear-gradient(180deg,var(--accent),#ff2f7a);color:white;border:none;border-radius:10px;cursor:pointer;box-shadow:0 6px 18px rgba(255,92,158,0.18);}
+
+/* mobile controls */
+#touch-controls{position:absolute;left:0;right:0;bottom:14px;display:flex;gap:18px;align-items:center;justify-content:center;z-index:50;pointer-events:auto;}
+.touch-btn{width:66px;height:66px;border-radius:50%;border:none;background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));color:white;font-size:22px;backdrop-filter: blur(4px);cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,0.5);}
+@media (max-width:420px){#logo{width:100px;} .touch-btn{width:58px;height:58px;} .hud{font-size:14px;padding:6px 10px;}}
